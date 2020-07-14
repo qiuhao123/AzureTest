@@ -16,10 +16,25 @@
 	<h1>Valuation Forecasting</h1>
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="loan" placeholder="loan" required="required" />
-        <input type="text" name="deposit" placeholder="deposit" required="required" />
-		<input type="text" name="number of branch" placeholder="number of branch" required="required" />
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict Bank's value</button>
+    	<input type="text" name="loan" placeholder="Loans secured by real estate, total in nonaccrual status" required="required" />
+      <input type="text" name="deposit" placeholder="Loans secured by real estate, total past due 30 - 89 days" required="required" />
+		  <input type="text" name="total equity capital" placeholder="total equity capital" required="required" />
+      <input type="text" name="equity" placeholder="equity" required="required" />
+      <input type="text" name="Real estate loans in domestic offices" placeholder="Real estate loans in domestic offices" required="required" />
+      <input type="text" name="Real estate loans in domestic offices in nonaccrual status" placeholder="Real estate loans in domestic offices in nonaccrual status" required="required" />
+      <input type="text" name="Tier one (core) capital" placeholder="Tier one (core) capital" required="required" />
+      <input type="text" name="Total liabilities and capital" placeholder="Total liabilities and capital" required="required" />
+      <input type="text" name="number of loans sec. by nonfarm" placeholder="number of loans sec. by nonfarm " required="required" />
+      <input type="text" name="Loans to individuals" placeholder="Loans to individuals" required="required" />
+      <input type="text" name="Commercial and industrial loans" placeholder="Commercial and industrial loans" required="required" />
+      <input type="text" name="loans to finance agricultural prod" placeholder="loans to finance agricultural prod" required="required" />
+      <input type="text" name="Cost of funding earning assets" placeholder="Cost of funding earning assets" required="required" />
+      <input type="text" name="Salaries and employee benefits" placeholder="Salaries and employee benefits" required="required" />
+      <input type="text" name="Efficiency ratio" placeholder="Efficiency ratio" required="required" />
+      <input type="text" name="Total domestic deposits to total assets" placeholder="Total domestic deposits to total assets" required="required" />
+      <input type="text" name="Amount time deposits $100,000 to $250,000" placeholder="Amount time deposits $100,000 to $250,000" required="required" />
+      <input type="text" name="Loan and lease loss provision to assets" placeholder="Loan and lease loss provision to assets" required="required" />
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict Bank's value</button>
     </form>
 
    <br>
