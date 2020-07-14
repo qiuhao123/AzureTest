@@ -1,16 +1,22 @@
-# This is a basic workflow to help you get started with Actions
-
-name: CI
+# This is a basic workflow
+name: Azure Test workflow
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
   [push]
 
+# CONFIGURATION
+# For help, go to https://github.com/Azure/Actions
+#
+# 1. Set up the following secrets in your repository:
+#   AZURE_WEBAPP_PUBLISH_PROFILE
+#
+# 2. Change these variables for your configuration:
 env:
-  AZURE_WEBAPP_NAME: 'test-Gavin' # set this to your application's name
+  AZURE_WEBAPP_NAME: test-Gavin # set this to your application's name
   AZURE_WEBAPP_PACKAGE_PATH: '.'         # set this to the path to your web app project, defaults to the repository root
-  PYTHON_VERSION: '3.6' 
+  PYTHON_VERSION: '3.7'                  # set this to the python version to use
 
 jobs:
   build:
