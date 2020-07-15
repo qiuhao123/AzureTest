@@ -17,7 +17,7 @@ def home():
 @app.route('/predict',methods=['POST'])
 def predict():
     int_features = [float(x) for x in request.form.values()]
-    final_features = [int_features]
+    final_features = [int_features] 
     #return type(''.join(final_features))
     scoring_uri = 'http://b4f7f8bc-8a7f-42fc-8759-b17db8bb8b22.westus2.azurecontainer.io/score'
 
@@ -32,4 +32,4 @@ def predict():
     #
     return render_template('home.html', prediction_text= prediction)
 if __name__ == "__main__":
-    app.run(debug=True)  
+    app.run(debug=True)
